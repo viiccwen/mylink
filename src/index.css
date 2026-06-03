@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme {
+  --color-background: #0b0713;
+  --color-foreground: #ede9fe;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'DM Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  background: #0b0713;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: #f5f3ff;
+}
+
+.theme-light {
+  background: radial-gradient(circle at 72% 8%, rgba(167, 139, 250, 0.24), transparent 30%), #fbf8ff;
+  color: #24153f;
+}
+
+.theme-dark {
+  background: radial-gradient(circle at 72% 8%, rgba(139, 92, 246, 0.18), transparent 32%), #0b0713;
+  color: #f8f7ff;
+}
+
+.theme-light .text-zinc-50,
+.theme-light .text-zinc-100 {
+  color: #24153f !important;
+}
+
+.theme-light .text-violet-200,
+.theme-light .text-violet-300 {
+  color: #7c3aed !important;
+}
+
+.theme-light .link-card {
+  border-color: rgba(124, 58, 237, 0.18) !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  color: #24153f !important;
+  box-shadow: 0 18px 48px rgba(109, 40, 217, 0.1) !important;
+}
+
+.theme-light .link-card:hover,
+.theme-light .link-card:focus-visible {
+  border-color: rgba(124, 58, 237, 0.38) !important;
+  background-color: rgba(245, 241, 255, 0.95) !important;
+  color: #5b21b6 !important;
+}
+
+.theme-light .muted-text {
+  color: #6b5d82 !important;
+}
+
+.theme-light .icon-shell,
+.theme-light .theme-toggle {
+  border-color: rgba(124, 58, 237, 0.16) !important;
+  background-color: transparent !important;
+  color: #6d28d9 !important;
+}
+
+.theme-dark .muted-text {
+  color: #ddd6f0 !important;
+}
