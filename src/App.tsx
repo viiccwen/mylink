@@ -116,7 +116,7 @@ function App() {
               return (
                 <Button
                   asChild
-                  className="link-card group h-auto w-full rounded-2xl px-4 py-3.5 text-left animate-in fade-in slide-in-from-bottom-2"
+                  className="link-card group h-auto w-full justify-start rounded-2xl px-4 py-3.5 text-left animate-in fade-in slide-in-from-bottom-2"
                   key={link.label}
                   style={{ animationDelay: `${120 + index * 45}ms` }}
                 >
