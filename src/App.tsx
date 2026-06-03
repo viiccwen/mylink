@@ -136,27 +136,29 @@ function App() {
             </Button>
           </div>
           <header className="flex flex-col items-center text-center">
-            <div className={["avatar-float reveal-item relative [--reveal-delay:180ms] transition-[margin] duration-500", isQrOpen ? "mb-[18.5rem]" : "mb-5"].join(' ')}>
-              <div className="absolute inset-0 rounded-[1.7rem] bg-violet-400/30 blur-xl" />
-              <button
-                aria-controls="profile-qr-popover"
-                aria-expanded={isQrOpen}
-                aria-label={isQrOpen ? 'Hide Vic Wen QR code' : 'Show Vic Wen QR code'}
-                className="avatar-button relative block rounded-[1.7rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 focus-visible:ring-offset-4 focus-visible:ring-offset-transparent"
-                onClick={() => setIsQrOpen((current) => !current)}
-                type="button"
-              >
-                <img
-                  alt="Portrait of Vic Wen"
-                  className="relative size-28 rounded-[1.7rem] border border-white/15 object-cover shadow-2xl shadow-black/30 transition duration-500 hover:scale-[1.03] sm:size-32"
-                  height="128"
-                  src="/vicwen.webp"
-                  width="128"
-                />
-                <span aria-hidden="true" className="avatar-hint absolute -bottom-1.5 left-1/2 -translate-x-1/2 rounded-full border border-white/15 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.18em]">
-                  QR
-                </span>
-              </button>
+            <div className={["avatar-anchor reveal-item relative [--reveal-delay:180ms] transition-[margin] duration-500", isQrOpen ? "mb-[18.5rem]" : "mb-5"].join(' ')}>
+              <div className="avatar-float relative">
+                <div className="absolute inset-0 rounded-[1.7rem] bg-violet-400/30 blur-xl" />
+                <button
+                  aria-controls="profile-qr-popover"
+                  aria-expanded={isQrOpen}
+                  aria-label={isQrOpen ? 'Hide Vic Wen QR code' : 'Show Vic Wen QR code'}
+                  className="avatar-button relative block rounded-[1.7rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 focus-visible:ring-offset-4 focus-visible:ring-offset-transparent"
+                  onClick={() => setIsQrOpen((current) => !current)}
+                  type="button"
+                >
+                  <img
+                    alt="Portrait of Vic Wen"
+                    className="relative size-28 rounded-[1.7rem] border border-white/15 object-cover shadow-2xl shadow-black/30 transition duration-500 hover:scale-[1.03] sm:size-32"
+                    height="128"
+                    src="/vicwen.webp"
+                    width="128"
+                  />
+                  <span aria-hidden="true" className="avatar-hint absolute -bottom-1.5 left-1/2 -translate-x-1/2 rounded-full border border-white/15 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.18em]">
+                    QR
+                  </span>
+                </button>
+              </div>
               {isQrOpen ? <QrPopover pattern={qrPattern} target={qrTarget} /> : null}
             </div>
             <h1 className="reveal-item text-3xl font-black tracking-tight text-zinc-50 [--reveal-delay:280ms] sm:text-4xl">Vic Wen</h1>
@@ -202,7 +204,7 @@ function QrPopover({ pattern, target }: { pattern: QrPattern; target: string }) 
   return (
     <div
       aria-label={`QR code for ${target}`}
-      className="qr-popover absolute left-1/2 top-[calc(100%-0.4rem)] z-40 w-56 -translate-x-1/2 rounded-[1.65rem] border p-4 text-left shadow-2xl backdrop-blur-xl"
+      className="qr-popover absolute left-1/2 top-[calc(100%-0.4rem)] z-40 w-56 rounded-[1.65rem] border p-4 text-left shadow-2xl backdrop-blur-xl"
       id="profile-qr-popover"
       role="dialog"
     >
