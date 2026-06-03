@@ -1,5 +1,6 @@
 import { Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa6'
 import type { IconType } from 'react-icons'
 import { TbWorldWww } from 'react-icons/tb'
@@ -36,14 +37,14 @@ const links: readonly LinkItem[] = [
   },
   {
     label: 'Discord',
-    handle: 'vicwen',
-    href: 'https://discord.com/users/vicwen',
+    handle: '751411358502879242',
+    href: 'https://discord.com/users/751411358502879242',
     icon: FaDiscord,
   },
   {
     label: 'Telegram',
-    handle: '@vicwen',
-    href: 'https://t.me/vicwen',
+    handle: '@wenvic',
+    href: 'https://t.me/wenvic',
     icon: FaTelegram,
   },
   {
@@ -78,9 +79,9 @@ function App() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:44px_44px] opacity-25" />
       <div className="pointer-events-none absolute -top-32 left-1/2 size-[30rem] -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
 
-      <section className="relative z-10 w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-700">
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-6">
-          <div className="mb-2 flex justify-end">
+      <section className="relative z-10 w-full max-w-md">
+        <div className="profile-card rounded-[2rem] border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-6">
+          <div className="reveal-item mb-2 flex justify-end [--reveal-delay:80ms]">
             <Button
               aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
               className="theme-toggle"
@@ -93,7 +94,7 @@ function App() {
             </Button>
           </div>
           <header className="flex flex-col items-center text-center">
-            <div className="relative mb-5">
+            <div className="avatar-float reveal-item relative mb-5 [--reveal-delay:180ms]">
               <div className="absolute inset-0 rounded-[1.7rem] bg-violet-400/30 blur-xl" />
               <img
                 alt="Portrait of Vic Wen"
@@ -103,8 +104,8 @@ function App() {
                 width="128"
               />
             </div>
-            <h1 className="text-3xl font-black tracking-tight text-zinc-50 sm:text-4xl">Vic Wen</h1>
-            <p className="muted-text mt-4 max-w-sm text-sm leading-6 text-zinc-300">
+            <h1 className="reveal-item text-3xl font-black tracking-tight text-zinc-50 [--reveal-delay:280ms] sm:text-4xl">Vic Wen</h1>
+            <p className="muted-text reveal-item mt-4 max-w-sm text-sm leading-6 text-zinc-300 [--reveal-delay:360ms]">
               𝗦𝗪𝗘 | 𝗥𝗲𝘀𝗲𝗮𝗿𝗰𝗵 | 𝗔𝗺𝗲𝗿𝗶𝗰𝗮𝗻𝗼 | 𝗪𝗼𝗿𝗸𝗼𝘂𝘁
             </p>
           </header>
@@ -116,9 +117,9 @@ function App() {
               return (
                 <Button
                   asChild
-                  className="link-card group h-auto w-full justify-start rounded-2xl px-4 py-3.5 text-left animate-in fade-in slide-in-from-bottom-2"
+                  className="link-card reveal-item group h-auto w-full justify-start rounded-2xl px-4 py-3.5 text-left"
                   key={link.label}
-                  style={{ animationDelay: `${120 + index * 45}ms` }}
+                  style={{ '--reveal-delay': `${460 + index * 70}ms` } as CSSProperties}
                 >
                   <a href={link.href} rel="noreferrer" target="_blank">
                     <span className="flex min-w-0 items-center gap-3">
