@@ -1,4 +1,4 @@
-import { ExternalLink, Moon, Sun } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa6'
 import type { IconType } from 'react-icons'
@@ -36,14 +36,14 @@ const links: readonly LinkItem[] = [
   },
   {
     label: 'Discord',
-    handle: 'viiccwen',
-    href: 'https://discord.com/users/viiccwen',
+    handle: 'vicwen',
+    href: 'https://discord.com/users/vicwen',
     icon: FaDiscord,
   },
   {
     label: 'Telegram',
-    handle: '@viiccwen',
-    href: 'https://t.me/viiccwen',
+    handle: '@vicwen',
+    href: 'https://t.me/vicwen',
     icon: FaTelegram,
   },
   {
@@ -81,16 +81,16 @@ function App() {
       <section className="relative z-10 w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/25 backdrop-blur-xl sm:p-6">
           <div className="mb-2 flex justify-end">
-          <Button
-            aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
-            className="theme-toggle"
-            onClick={() => setTheme(isDark ? 'light' : 'dark')}
-            size="icon"
-            type="button"
-            variant="ghost"
-          >
-            {isDark ? <Sun aria-hidden="true" className="size-4" /> : <Moon aria-hidden="true" className="size-4" />}
-          </Button>
+            <Button
+              aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+              className="theme-toggle"
+              onClick={() => setTheme(isDark ? 'light' : 'dark')}
+              size="icon"
+              type="button"
+              variant="ghost"
+            >
+              {isDark ? <Sun aria-hidden="true" className="size-4" /> : <Moon aria-hidden="true" className="size-4" />}
+            </Button>
           </div>
           <header className="flex flex-col items-center text-center">
             <div className="relative mb-5">
@@ -103,8 +103,7 @@ function App() {
                 width="128"
               />
             </div>
-            <p className="mb-2 font-mono text-xs uppercase tracking-[0.28em] text-violet-300">Taipei, Taiwan</p>
-            <h1 className="text-4xl font-black tracking-tight text-zinc-50 sm:text-5xl">Vic Wen</h1>
+            <h1 className="text-3xl font-black tracking-tight text-zinc-50 sm:text-4xl">Vic Wen</h1>
             <p className="muted-text mt-4 max-w-sm text-sm leading-6 text-zinc-300">
               𝗦𝗪𝗘 | 𝗥𝗲𝘀𝗲𝗮𝗿𝗰𝗵 | 𝗔𝗺𝗲𝗿𝗶𝗰𝗮𝗻𝗼 | 𝗪𝗼𝗿𝗸𝗼𝘂𝘁
             </p>
@@ -117,7 +116,7 @@ function App() {
               return (
                 <Button
                   asChild
-                  className="link-card group h-auto w-full justify-between rounded-2xl px-4 py-3.5 text-left animate-in fade-in slide-in-from-bottom-2"
+                  className="link-card group h-auto w-full rounded-2xl px-4 py-3.5 text-left animate-in fade-in slide-in-from-bottom-2"
                   key={link.label}
                   style={{ animationDelay: `${120 + index * 45}ms` }}
                 >
@@ -131,7 +130,6 @@ function App() {
                         <span className="muted-text block truncate font-mono text-xs text-zinc-400">{link.handle}</span>
                       </span>
                     </span>
-                    <ExternalLink aria-hidden="true" className="size-4 shrink-0 opacity-55 transition group-hover:opacity-100" />
                   </a>
                 </Button>
               )
@@ -139,9 +137,6 @@ function App() {
           </nav>
         </div>
 
-        <p className="muted-text mt-5 text-center font-mono text-xs uppercase tracking-[0.2em] text-zinc-500">
-          Profile · Blog · Open Source
-        </p>
       </section>
     </main>
   )
