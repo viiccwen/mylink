@@ -18,6 +18,18 @@ type LinkItem = {
 
 const links: readonly LinkItem[] = [
   {
+    label: 'Instagram',
+    handle: '@viiccwen',
+    href: 'https://www.instagram.com/viiccwen/',
+    icon: FaInstagram,
+  },
+  {
+    label: 'Website',
+    handle: 'vicwen.app',
+    href: 'https://vicwen.app',
+    icon: TbWorldWww,
+  },
+  {
     label: 'GitHub',
     handle: '@viiccwen',
     href: 'https://github.com/viiccwen',
@@ -25,19 +37,13 @@ const links: readonly LinkItem[] = [
   },
   {
     label: 'LinkedIn',
-    handle: 'Vic Wen',
+    handle: 'Guan Hua Wen',
     href: 'https://www.linkedin.com/in/viiccwen/',
     icon: FaLinkedin,
   },
   {
-    label: 'Instagram',
-    handle: '@viiccwen',
-    href: 'https://www.instagram.com/viiccwen/',
-    icon: FaInstagram,
-  },
-  {
     label: 'Discord',
-    handle: '751411358502879242',
+    handle: 'vicwen',
     href: 'https://discord.com/users/751411358502879242',
     icon: FaDiscord,
   },
@@ -46,12 +52,6 @@ const links: readonly LinkItem[] = [
     handle: '@wenvic',
     href: 'https://t.me/wenvic',
     icon: FaTelegram,
-  },
-  {
-    label: 'Website',
-    handle: 'vicwen.app',
-    href: 'https://vicwen.app',
-    icon: TbWorldWww,
   },
 ]
 
