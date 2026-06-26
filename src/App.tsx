@@ -37,8 +37,8 @@ const links: readonly LinkItem[] = [
   },
   {
     label: 'Website',
-    handle: 'vicwen.app',
-    href: 'https://vicwen.app',
+    handle: 'vicwen.com',
+    href: 'https://vicwen.com',
     icon: TbWorldWww,
   },
   {
