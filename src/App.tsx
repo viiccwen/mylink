@@ -42,6 +42,12 @@ const links: readonly LinkItem[] = [
     icon: TbWorldWww,
   },
   {
+    label: 'Startup',
+    handle: 'Fearyn.ai',
+    href: 'https://fearyn.com',
+    icon: TbWorldWww,
+  },
+  {
     label: 'GitHub',
     handle: '@viiccwen',
     href: 'https://github.com/viiccwen',
