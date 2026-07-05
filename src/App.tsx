@@ -169,7 +169,7 @@ function App() {
             </div>
             <h1 className="reveal-item text-3xl font-black tracking-tight text-zinc-50 [--reveal-delay:280ms] sm:text-4xl">Vic Wen</h1>
             <p className="muted-text reveal-item mt-4 max-w-sm text-sm leading-6 text-zinc-300 [--reveal-delay:360ms]">
-              𝗦𝗪𝗘 | 𝗥𝗲𝘀𝗲𝗮𝗿𝗰𝗵 | 𝗔𝗺𝗲𝗿𝗶𝗰𝗮𝗻𝗼 | 𝗪𝗼𝗿𝗸𝗼𝘂𝘁
+              𝗔𝗺𝗲𝗿𝗶𝗰𝗮𝗻𝗼 | 𝗪𝗼𝗿𝗸𝗼𝘂𝘁 | 𝗠𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝗥𝗗𝗜
             </p>
           </header>
 
